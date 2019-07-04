@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Testando Range</title>
+		<script type="text/javascript">
+		var range =  document.getElementById('range').innerHTML;
+		function aumentar(){
+			range ++;
+			document.getElementById('range').innerHTML=range;
+		}
+		function diminuir(){
+			range --:
+			document.getElementById('range').innerHTML=range;
+		}
+	</script>
+</head>
+<body>
+	<h1>Manipulando range</h1>
+	<hr>
+	<p>
+		<b>Selecione o valor:</b><br>
+	 	<input type="range" name="range" value="0" step="1" maxlength="10" >
+	 	<span id="range">0</span><br>
+	 	<button onclick="diminuir();"> < </button>
+	 	<button onclick="aumentar();"> > </button>
+	</p>
+
+</body>
+</html>

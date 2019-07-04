@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Idades</title>
+    </head>
+    <body>
+        <h1>O maior dos números</h1>
+        <hr>
+        <div>
+           <button onclick="setAges();">Clique em mim para cadastrar idades</button>
+            <br><br>
+           <button onclick="showAges();">Exibir relatório</button>
+           
+        </div>
+  
+        <script type="text/javascript">
+        var counter=0;
+        var ages =new Array() ,lassThen = new Array(),greatThen = new Array();  
+
+        function setAges(){
+            while((aux = prompt("Cadastre as idades\n"+
+                                "Clique em cancelar para parar."))!=null){
+        
+                ages.push(parseInt(aux));
+                counter++;
+            }
+            console.log(counter);
+        }
+        
+        function showAges(){
+            for(var i=0;i<counter;i++){
+                if(ages[i]<18){
+                    console.log("maior");
+                    lassThen.push(ages[i]);
+                }else{
+                    console.log("menor");
+                    greatThen.push(ages[i]);
+                }
+            }
+
+           setAgesHtml(lassThen,"Menor de Idade");
+           setAgesHtml(greatThen,"Maior de Idade");    
+        }
+
+        function setAgesHtml(setAge,message){
+            var element_father =  document.body;
+            var h1,paragraph;
+            //coloca o tittle
+            newElement=  document.createElement("h1");
+            elementText =  document.createTextNode(message);
+            console.log(newElement);
+            newElement.appendChild(elementText);
+            element_father.appendChild(newElement);
+            for(var i=0;i<setAge.length;i++){
+                newElement=  document.createElement("p");
+                newElement.textContent = setAge[i];
+                element_father.appendChild(newElement);
+            }
+
+        }
+        </script>
+    </body>
+</html>

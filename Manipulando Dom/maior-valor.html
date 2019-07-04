@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Cáculo de médias</title>
+    </head>
+    <body>
+        <h1>O maior dos números</h1>
+        <hr>
+        <div>
+           <button onclick="setValues();">Clique em mim para cadastrar valores</button>
+            <br><br>
+           <button onclick="showValues();">Exibir o maior valor</button>
+           
+        </div>
+  
+        <script type="text/javascript">
+            // arrays funcionam como objetos
+           var numbers = new Array(5); // se torna global
+            console.log(numbers);
+            
+            //imprime valores          
+            function setValues(){
+                for(var i =0;i<4;i++)
+                  numbers[i]=parseInt(prompt("Informe valor "+(i+1)+" de 4"));     
+                  
+            }
+            
+            function greatThan(){
+                great = numbers[0];
+                
+                for(var i=1;i<5;i++){
+                    if(numbers[i]>great)
+                        great = numbers[i];
+                }
+                return great;
+                console.log(great);
+            }
+
+            function showValues(){
+                var paragraph;
+                var element_father = document.body;
+                var great;
+                great = agreatThan();
+                newElement = document.createElement("p");
+                console.log(great);
+                newElement.textContent =  great;
+                element_father.appendChild(newElement);
+                 
+            }
+        </script>
+    </body>
+</html>

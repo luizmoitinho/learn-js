@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tratamento de Erro</title>
+    </head>
+    <body>
+        <h1>Tratamento de Erro</h1>
+        <script>
+            var number; // máximo é 10
+            try{    
+                number=prompt("Informe um valor positivo: " );
+                if(number<0)
+                    throw new Error("Valor não pode ser negativo!");
+                document.write("Concluído: "+number);
+            }catch(e){
+                alert("Erro: "+e.message);
+                //console.log("Mensagem de erro: "+ e.message);
+            }finally{
+                document.write("<br> Fim do tratamento!");
+            }
+
+        
+        
+        
+        </script>
+    </body>
+</html> 

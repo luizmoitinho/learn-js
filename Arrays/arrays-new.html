@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Estudo de Arrays Literais</title>
+    </head>
+    <body>
+        <script>
+             var cidades =  new Array("São Paulo","Itabaiana","Porto-Seguro");
+            // for(var i=0;i<cidades.length;i++){
+            //     document.write("<br>Elemtento [",i,"] = ",cidades[i]);
+            // }
+            showArray(cidades);
+
+            function showArray(cidades){
+                document.write("\t\tExibindo array <br>");
+                for(var i=0;i<cidades.length;i++){
+                    document.write("<br>Elemtento [",i,"] = ",cidades[i]);
+                }
+
+            }
+            if(cidades[3]==null){
+                document.write("<br>Antes de prencher o elemento  :"+cidades[3]+"<br>");
+               // cidades[3] = prompt("Informe uma cidade : ");
+            }
+            showArray(cidades);
+        </script>
+
+    </body>
+</html>

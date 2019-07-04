@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Acerte o Valor Premiado</title>
+    </head>
+    <body>
+
+        <label for="segredo">Informe um valor</label>
+        <input type="number" id="segredo" placeholder="Digite aqui">
+        <input type="submit" name="btn-enviar" id="btn-enviar" onclick="botaoClicado();" value="Enviar">
+
+        <script>
+            var valor_secreto = Array(0,5,8,12,354,2,125,5);
+
+            
+        
+            var botaoClicado =  function(){
+                
+                caixaDoNumero =  document.getElementById('segredo').value;
+                for(var i=0;i<valor_secreto.length;i++){
+                    if(valor_secreto ==  parseInt(caixaDoNumero)){
+                        alert("Você acertou o valor");
+                        
+                    }
+                    
+                
+                }
+                    alert("Valor errado, tente outro!");
+                
+              
+
+            }
+
+           
+
+
+            
+
+
+
+        </script>
+    </body>
+
+</html>

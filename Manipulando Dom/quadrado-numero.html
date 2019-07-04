@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Cáculo de médias</title>
+    </head>
+    <body>
+        <h1>O quadrado dos números</h1>
+        <hr>
+        <div>
+           <button onclick="setValues();">Clique em mim para cadastrar valores</button>
+            <br><br>
+           <button onclick="showValues();">Exibir o quadrado dos valores</button>
+           
+        </div>
+  
+        <script type="text/javascript">
+            // arrays funcionam como objetos
+           var numbers = new Array(5); // se torna global
+            console.log(numbers);
+            
+            //imprime valores          
+            function setValues(){
+                for(var i =0;i<4;i++){
+                  numbers[i]=parseInt(prompt("Informe valor "+(i+1)+" de 4"));
+                  numbers[i]**=2;
+                }
+                  
+            }
+            function showValues(){
+                var paragraph;
+                var element_father = document.body;
+                for(var i=0;i<4;i++){
+                    paragraph = document.createElement("p");
+                    console.log(paragraph);
+                    paragraph.textContent= numbers[i];
+                    element_father.appendChild(paragraph);
+                }
+                 
+                 
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Acerte o Valor Premiado</title>
+    </head>
+    <body>
+
+        <label for="valor">Informe um valor</label>
+        <input type="number" id="valor" placeholder="Digite aqui">
+        <input type="submit" name="btn-cadastrar" id="btn-cadastrar" onclick="adicionar_sorteados()" value="Cadastrar">
+        <table border="1">
+            <tr></tr>
+                <th colspan=7>Jogador</th>
+            </tr>
+            <tr>
+                <th>Valores</th>
+                <td id="6">0</td>
+                <td id="5">0</td>
+                <td id="4">0</td>
+                <td id="3">0</td>
+                <td id="2">0</td>
+                <td id="1">0</td>
+            </tr>
+            
+        </table>
+        <p>
+            Numeros restantes: <span id="tentativas">6</span> 
+        </p>
+        <script>
+            
+            var btn_cadastrar =  document.getElementById('btn-cadastrar');
+            
+
+            /*==================  FUNCOES ============*/  
+            var adicionar_sorteados = function(){
+                var valor =  document.getElementById('valor').value;
+                var tentativas = parseInt(document.getElementById('tentativas').innerHTML);
+                if(tentativas>=1){
+                    switch(tentativas){
+                        case 1:
+                            document.getElementById('1').innerHTML = valor;
+                            break;
+                        case 2:
+                            document.getElementById('2').innerHTML = valor;
+                            break;
+                        case 3:
+                            document.getElementById('3').innerHTML = valor;
+                            break;
+                        case 4:
+                            document.getElementById('4').innerHTML = valor;
+                            break;
+                        case 5:
+                            document.getElementById('5').innerHTML = valor;
+                            break;
+                        case 6:
+                            document.getElementById('6').innerHTML = valor;
+                            break;
+                    }
+                    document.getElementById('tentativas').innerHTML = --tentativas; 
+                    
+                }
+                else
+                    alert("Não foi possível cadastrar um novo valor!")
+            }
+            
+        
+
+               
+        </script>
+    </body>
+
+</html>
