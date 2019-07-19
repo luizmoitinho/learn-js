@@ -1,0 +1,43 @@
+<!doctype html>
+<hmtl>
+<head>
+    <title>Lista 2</title>
+</head>
+<body>
+<script>
+var N = prompt("num :" );
+var Quantia=[],i=1,R=0,S=0,C=0;
+while(i<=N){
+    Quantia[0] = prompt("N : ");
+    Quantia[1] = prompt("a : ");
+
+    console.log(Quantia[0]+" - "+Quantia[1]); 
+    Quantia[0] =  parseInt(Quantia[0]);
+
+        if(Quantia[1]=='S') 
+            S+=Quantia[0];
+        else if(Quantia[1]=='R')
+            R+=Quantia[0];
+        else if(Quantia[1]=='C') 
+            C+=Quantia[0];
+    
+     
+     console.log("qtd: "+S);
+     i++;
+}
+var total = S+C+R;
+console.log("Total: "+total+" cobaias");
+console.log("Total de coelhos: "+C);
+C= (C/total*100 ).toFixed(2);
+console.log("Total de ratos: "+R);
+R= (R/total*100).toFixed(2);
+console.log("Total de sapos: "+S);
+S= (S/total*100).toFixed(2);
+
+console.log("Percentual de coelhos: "+C+" %");
+console.log("Percentual de ratos: "+R+" %");
+console.log("Percentual de sapos: "+S+" %");
+
+</script>
+</body>
+</hmtl>

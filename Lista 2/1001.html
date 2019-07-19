@@ -1,0 +1,35 @@
+<!doctype html>
+<hmtl>
+<head>
+    <title>Lista 2</title>
+</head>
+<body>
+<script>
+var Valor,M=1,N=1,soma=0;
+var string=" ";
+while(M>=1 && N>=1){
+    soma = 0;
+    string =" ";
+    Valor =  prompt().split(" ");
+    M = parseInt(Valor[0]);
+    N =  parseInt(Valor[1]);
+    if(M>N){
+        for(let i=N;i<=M;i++){
+            string += i + " ";
+            soma+=i;
+        }
+    }
+    else{
+        for(let i=M;i<=N;i++){
+            string += i + " ";    
+            soma+=i;
+        }
+    }    
+    if(M>0 && N>0)
+        console.log(string+ " Sum="+soma);
+}
+
+
+</script>
+</body>
+</hmtl>

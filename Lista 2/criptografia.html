@@ -1,0 +1,48 @@
+<!doctype html>
+<hmtl>
+
+    <head>
+        <title>Lista 2</title>
+    </head>
+
+    <body>
+        <script>
+        var N = 1;
+        if (N > 0 && N <= Math.pow(10,4)) {
+            for (let counter = 1; counter <= N; counter++) {
+                var M = prompt("palavr: ");
+                if (M.length > 0 && M.length <= Math.pow(10,3)) {
+                    var word_step = [];
+                    //step 1
+                    for(let i = 0; i < M.length; i++) {
+                        if((M.charCodeAt(i)>64 && M.charCodeAt(i)<91) || (M.charCodeAt(i)>96 && M.charCodeAt(i)<123)){
+                            word_step.push(String.fromCharCode(M.charCodeAt(i)+3));
+                            continue;
+                        }
+                        word_step.push(String.fromCharCode(M.charCodeAt(i)));
+
+                    }
+                    //step 2
+                    word_step.reverse();
+                    //step 3
+
+                    for (let i = parseInt(word_step.length / 2); i <= word_step.length; i++) {
+                        for (let j = 0; j < 127; j++) {
+                            if (word_step[i] == String.fromCharCode(j)) {
+                                word_step[i] = String.fromCharCode(j - 1);
+                            }
+                        }
+                    }
+                }
+                M = "";
+                for(let i in word_step)
+                    M+=word_step[i];
+                console.log(M);
+            }
+        }
+
+
+
+        </script>
+    </body>
+</hmtl>
