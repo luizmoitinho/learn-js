@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Manipulando elementos dinamicament</title>
+    </head>
+    
+    <body>
+        <h1>DIVS STATICAS</h1>
+        <div class="masc">Luiz Carlos</div>
+        <div class="fem">Fernanda Lima</div>
+        <div class="fem">Carla Castro</div>
+        <div class="masc">Luciano Castro</div>
+        <hr>
+        <h1>DIVS DINAMICA</h1>
+        <div class="camp_masc">
+            <h2>CLASS MASC</h2>
+
+        </div>
+        <div class="camp_fem">
+                <h2>CLASS FEM</h2>
+    
+            </div>
+    </body>
+    <script>
+        var homens =  document.getElementsByClassName('masc');
+        var mulheres =  document.getElementsByClassName('fem');
+        console.log(homens)
+        for(var i=0;i<homens.length; i++){
+            console.log(i)
+            var newDiv = document.createElement("div");
+            newDiv.innerText = homens[i].innerHTML; 
+            document.querySelector('.camp_masc').appendChild(newDiv);        
+        }
+        for(var i=0;i<mulheres.length; i++){
+            var newDiv = document.createElement("div");
+            newDiv.innerText = mulheres[i].innerHTML; 
+            document.querySelector('.camp_fem').appendChild(newDiv);        
+        }
+
+
+        
+        
+    </script>
+
+</html>

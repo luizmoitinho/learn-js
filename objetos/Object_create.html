@@ -1,0 +1,22 @@
+<script>
+var Carro={
+    marca:"Fiat",
+    qualMarca: function (){
+        console.log(this.marca);
+    }
+};
+
+
+Carro.ano = 2010;
+
+
+var carro1 = Object.create(Carro);
+console.log(carro1);
+carro1.cor="vermelho";
+
+var carro2 = Object.create(Carro);
+console.log(carro2);
+
+
+
+</script>

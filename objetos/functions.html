@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Funções</title>
+    </head>
+    <body>
+        <h2>Praticando funções em JS - Entendo mais à fundo</h2>
+        <hr>
+        <script>
+                var square = function (n){
+                    return n*n;
+                };
+            
+            
+                var fat = function fatorial(n){
+                    if (n==0 || n==1)
+                        return 1;
+                    else
+                        return n*fatorial(n-1);
+                }
+            
+            
+                 function walkTree(node){
+                    if(node==null)
+                        return;
+                    else
+                        for(let i=0;i<node.childNodes.length;i++){
+                            walkTree(node.childNodes[i]);
+                            console.log(node.childNodes[i]);
+                        }
+            
+                 }
+            </script>
+            
+    </body>
+</html>
