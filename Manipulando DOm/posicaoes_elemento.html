@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Posicionamento do Elemento</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            background-color: #ccc;
+            color: #fff;
+            font-size: 14px
+        }
+
+        #p1 {
+            position:;
+        }
+
+        #div1 {
+            background: rgb(104, 9, 9);
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            margin: 100px;
+            position: relative;
+        }
+
+        #div1-1 {
+            background: rgb(123, 133, 69);
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="p1">
+            <div id="div1-1">
+                <p>asdas </p>
+            </div>
+        </div>
+    </div>
+    <div id="div2">
+
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        var div1 = $("#div1");
+        var div1_1 = $("#div1-1");
+        var posicao = document.getElementById("div1-1").offsetParent;
+        //var posicao = $("#div1-1").offsetParent;
+        console.log(posicao);
+    </script>
+</body>
+
+</html>

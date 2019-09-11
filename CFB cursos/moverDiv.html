@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Mover Div</title>
+    <style>
+        #div1 {
+            padding:2%;
+            width: 100px;
+            height: 100px;
+            background: #48b181;
+            position: relative;
+            font-size: 20px;
+            color:#fff;       
+            cursor: pointer;
+            transition: .2s linear;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+
+        #div1:hover {
+            transition: .2s linear;
+            background: #216e4b;
+            cursor: pointer;
+            transform: scale(1.02);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <span>
+                Clique aqui para iniciar
+        </span>
+        
+    </div>
+
+
+    <script src="jquery.min.js"></script>
+    <script>
+        let div;
+        let posicaoX;
+        let posicaoY
+        window.addEventListener("load", () => {
+            div = $("#div1");
+            posicaoX = div.position().top;
+            posicaoY = div.position().left;
+            
+           div.click(()=>{
+                document.addEventListener("keydown",moverDiv);
+                div.css({backgroundColor:"#485aff"});
+                div.text("Start")
+                
+           });
+        });
+
+       
+        
+        function moverDiv(){
+              const qtdDeslocamento =8;
+              let obj = document.getElementById("div1");
+                switch (event.keyCode) {
+                    case 37: // code = 37 -  seta para esquerda
+                        posicaoX -= qtdDeslocamento;
+                        obj.style.left = posicaoX + "px";
+                        break;
+                    case 38: // code = 38 -  seta para cima
+                        posicaoY -= qtdDeslocamento;
+                        obj.style.top = posicaoY + "px";
+                        break;
+                    case 39: // code = 39 -  seta para direita
+                        posicaoX += qtdDeslocamento;
+                        obj.style.left = posicaoX + "px";
+                        break;
+                    case 40: // code = 40 -  seta para baixo
+                        posicaoY += qtdDeslocamento;
+                        obj.style.top = posicaoY + "px";
+                        break;
+                }
+
+        }
+    </script>
+</body>
+
+</html>
