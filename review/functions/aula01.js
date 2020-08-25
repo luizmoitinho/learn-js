@@ -23,3 +23,13 @@ const arrow = ()=>{
 }
 
 arrow();
+
+//Funções dentro de objetos
+
+const Pessoa ={
+  falar(){
+    console.log('Obj Pessoa falando');
+  }
+}
+
+Pessoa.falar();
